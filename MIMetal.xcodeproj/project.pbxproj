@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF14285D2338BF2700EF3DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14285C2338BF2700EF3DA8 /* AppDelegate.swift */; };
+		AF14285F2338BF2700EF3DA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14285E2338BF2700EF3DA8 /* ViewController.swift */; };
+		AF1428622338BF2700EF3DA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1428602338BF2700EF3DA8 /* Main.storyboard */; };
+		AF1428642338BF2800EF3DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1428632338BF2800EF3DA8 /* Assets.xcassets */; };
+		AF1428672338BF2800EF3DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1428652338BF2800EF3DA8 /* LaunchScreen.storyboard */; };
+		AF1428722338BF2900EF3DA8 /* MIMetalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428712338BF2900EF3DA8 /* MIMetalTests.swift */; };
+		AF14287D2338BF2900EF3DA8 /* MIMetalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14287C2338BF2900EF3DA8 /* MIMetalUITests.swift */; };
+		AF1428C82338BF7200EF3DA8 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428972338BF7200EF3DA8 /* StreamReader.swift */; };
+		AF1428C92338BF7200EF3DA8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428982338BF7200EF3DA8 /* Extension.swift */; };
+		AF1428CA2338BF7200EF3DA8 /* MathUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428992338BF7200EF3DA8 /* MathUtil.swift */; };
+		AF1428CB2338BF7200EF3DA8 /* ObjLoaderBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF14289C2338BF7200EF3DA8 /* ObjLoaderBridge.mm */; };
+		AF1428CC2338BF7200EF3DA8 /* ObjTransToBinary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF14289E2338BF7200EF3DA8 /* ObjTransToBinary.cpp */; };
+		AF1428CD2338BF7200EF3DA8 /* ZlibTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14289F2338BF7200EF3DA8 /* ZlibTool.swift */; };
+		AF1428CE2338BF7200EF3DA8 /* MIMetalRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A02338BF7200EF3DA8 /* MIMetalRender.swift */; };
+		AF1428CF2338BF7200EF3DA8 /* MIMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A12338BF7200EF3DA8 /* MIMetalView.swift */; };
+		AF1428D02338BF7200EF3DA8 /* MIMetalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A22338BF7200EF3DA8 /* MIMetalScene.swift */; };
+		AF1428D12338BF7200EF3DA8 /* AvatarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A32338BF7200EF3DA8 /* AvatarLoader.swift */; };
+		AF1428D22338BF7200EF3DA8 /* MIMetalBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A52338BF7200EF3DA8 /* MIMetalBackground.swift */; };
+		AF1428D32338BF7200EF3DA8 /* MIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A62338BF7200EF3DA8 /* MIObject.swift */; };
+		AF1428D42338BF7200EF3DA8 /* MIDrawLineObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428A72338BF7200EF3DA8 /* MIDrawLineObject.swift */; };
+		AF1428D62338BF7200EF3DA8 /* MIComputeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428AA2338BF7200EF3DA8 /* MIComputeHandler.swift */; };
+		AF1428D72338BF7200EF3DA8 /* MIEyelidComputeRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428AB2338BF7200EF3DA8 /* MIEyelidComputeRender.swift */; };
+		AF1428D82338BF7200EF3DA8 /* MIObjectMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428AE2338BF7200EF3DA8 /* MIObjectMaterial.swift */; };
+		AF1428D92338BF7200EF3DA8 /* MINode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428AF2338BF7200EF3DA8 /* MINode.swift */; };
+		AF1428DA2338BF7200EF3DA8 /* MIMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B02338BF7200EF3DA8 /* MIMaterial.swift */; };
+		AF1428DB2338BF7200EF3DA8 /* MICamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B12338BF7200EF3DA8 /* MICamera.swift */; };
+		AF1428DC2338BF7200EF3DA8 /* MIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B22338BF7200EF3DA8 /* MIAction.swift */; };
+		AF1428DD2338BF7200EF3DA8 /* MIMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B32338BF7200EF3DA8 /* MIMesh.swift */; };
+		AF1428DE2338BF7200EF3DA8 /* MIHitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B42338BF7200EF3DA8 /* MIHitResult.swift */; };
+		AF1428DF2338BF7200EF3DA8 /* model_diffuse.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B72338BF7200EF3DA8 /* model_diffuse.metal */; };
+		AF1428E02338BF7200EF3DA8 /* model_highlight.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B82338BF7200EF3DA8 /* model_highlight.metal */; };
+		AF1428E12338BF7200EF3DA8 /* MIObjectDiffuse.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428B92338BF7200EF3DA8 /* MIObjectDiffuse.metal */; };
+		AF1428E22338BF7200EF3DA8 /* shader_util.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BA2338BF7200EF3DA8 /* shader_util.metal */; };
+		AF1428E32338BF7200EF3DA8 /* MIObjectLight.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BB2338BF7200EF3DA8 /* MIObjectLight.metal */; };
+		AF1428E42338BF7200EF3DA8 /* background.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BC2338BF7200EF3DA8 /* background.metal */; };
+		AF1428E52338BF7200EF3DA8 /* EyelidDrawableShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BE2338BF7200EF3DA8 /* EyelidDrawableShader.metal */; };
+		AF1428E62338BF7200EF3DA8 /* MIModelCreater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428C02338BF7200EF3DA8 /* MIModelCreater.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF14286E2338BF2900EF3DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF1428512338BF2700EF3DA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF1428582338BF2700EF3DA8;
+			remoteInfo = MIMetal;
+		};
+		AF1428792338BF2900EF3DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF1428512338BF2700EF3DA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF1428582338BF2700EF3DA8;
+			remoteInfo = MIMetal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF1428592338BF2700EF3DA8 /* MIMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF14285C2338BF2700EF3DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF14285E2338BF2700EF3DA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF1428612338BF2700EF3DA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF1428632338BF2800EF3DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF1428662338BF2800EF3DA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF1428682338BF2800EF3DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF14286D2338BF2900EF3DA8 /* MIMetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MIMetalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1428712338BF2900EF3DA8 /* MIMetalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalTests.swift; sourceTree = "<group>"; };
+		AF1428732338BF2900EF3DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1428782338BF2900EF3DA8 /* MIMetalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MIMetalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF14287C2338BF2900EF3DA8 /* MIMetalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalUITests.swift; sourceTree = "<group>"; };
+		AF14287E2338BF2900EF3DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1428972338BF7200EF3DA8 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		AF1428982338BF7200EF3DA8 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		AF1428992338BF7200EF3DA8 /* MathUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathUtil.swift; sourceTree = "<group>"; };
+		AF14289B2338BF7200EF3DA8 /* ObjTransToBinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjTransToBinary.h; sourceTree = "<group>"; };
+		AF14289C2338BF7200EF3DA8 /* ObjLoaderBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjLoaderBridge.mm; sourceTree = "<group>"; };
+		AF14289D2338BF7200EF3DA8 /* ObjLoaderBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjLoaderBridge.h; sourceTree = "<group>"; };
+		AF14289E2338BF7200EF3DA8 /* ObjTransToBinary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjTransToBinary.cpp; sourceTree = "<group>"; };
+		AF14289F2338BF7200EF3DA8 /* ZlibTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZlibTool.swift; sourceTree = "<group>"; };
+		AF1428A02338BF7200EF3DA8 /* MIMetalRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMetalRender.swift; sourceTree = "<group>"; };
+		AF1428A12338BF7200EF3DA8 /* MIMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMetalView.swift; sourceTree = "<group>"; };
+		AF1428A22338BF7200EF3DA8 /* MIMetalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMetalScene.swift; sourceTree = "<group>"; };
+		AF1428A32338BF7200EF3DA8 /* AvatarLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarLoader.swift; sourceTree = "<group>"; };
+		AF1428A52338BF7200EF3DA8 /* MIMetalBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMetalBackground.swift; sourceTree = "<group>"; };
+		AF1428A62338BF7200EF3DA8 /* MIObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIObject.swift; sourceTree = "<group>"; };
+		AF1428A72338BF7200EF3DA8 /* MIDrawLineObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDrawLineObject.swift; sourceTree = "<group>"; };
+		AF1428AA2338BF7200EF3DA8 /* MIComputeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIComputeHandler.swift; sourceTree = "<group>"; };
+		AF1428AB2338BF7200EF3DA8 /* MIEyelidComputeRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIEyelidComputeRender.swift; sourceTree = "<group>"; };
+		AF1428AE2338BF7200EF3DA8 /* MIObjectMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIObjectMaterial.swift; sourceTree = "<group>"; };
+		AF1428AF2338BF7200EF3DA8 /* MINode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MINode.swift; sourceTree = "<group>"; };
+		AF1428B02338BF7200EF3DA8 /* MIMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMaterial.swift; sourceTree = "<group>"; };
+		AF1428B12338BF7200EF3DA8 /* MICamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MICamera.swift; sourceTree = "<group>"; };
+		AF1428B22338BF7200EF3DA8 /* MIAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAction.swift; sourceTree = "<group>"; };
+		AF1428B32338BF7200EF3DA8 /* MIMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMesh.swift; sourceTree = "<group>"; };
+		AF1428B42338BF7200EF3DA8 /* MIHitResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIHitResult.swift; sourceTree = "<group>"; };
+		AF1428B72338BF7200EF3DA8 /* model_diffuse.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = model_diffuse.metal; sourceTree = "<group>"; };
+		AF1428B82338BF7200EF3DA8 /* model_highlight.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = model_highlight.metal; sourceTree = "<group>"; };
+		AF1428B92338BF7200EF3DA8 /* MIObjectDiffuse.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIObjectDiffuse.metal; sourceTree = "<group>"; };
+		AF1428BA2338BF7200EF3DA8 /* shader_util.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shader_util.metal; sourceTree = "<group>"; };
+		AF1428BB2338BF7200EF3DA8 /* MIObjectLight.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIObjectLight.metal; sourceTree = "<group>"; };
+		AF1428BC2338BF7200EF3DA8 /* background.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = background.metal; sourceTree = "<group>"; };
+		AF1428BE2338BF7200EF3DA8 /* EyelidDrawableShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = EyelidDrawableShader.metal; sourceTree = "<group>"; };
+		AF1428C02338BF7200EF3DA8 /* MIModelCreater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIModelCreater.swift; sourceTree = "<group>"; };
+		AF1429272338C36200EF3DA8 /* MIMetal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIMetal-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF1428562338BF2700EF3DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF14286A2338BF2900EF3DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1428752338BF2900EF3DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF1428502338BF2700EF3DA8 = {
+			isa = PBXGroup;
+			children = (
+				AF14285B2338BF2700EF3DA8 /* MIMetal */,
+				AF1428702338BF2900EF3DA8 /* MIMetalTests */,
+				AF14287B2338BF2900EF3DA8 /* MIMetalUITests */,
+				AF14285A2338BF2700EF3DA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF14285A2338BF2700EF3DA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428592338BF2700EF3DA8 /* MIMetal.app */,
+				AF14286D2338BF2900EF3DA8 /* MIMetalTests.xctest */,
+				AF1428782338BF2900EF3DA8 /* MIMetalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF14285B2338BF2700EF3DA8 /* MIMetal */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428942338BF7200EF3DA8 /* Core */,
+				AF14285C2338BF2700EF3DA8 /* AppDelegate.swift */,
+				AF14285E2338BF2700EF3DA8 /* ViewController.swift */,
+				AF1428602338BF2700EF3DA8 /* Main.storyboard */,
+				AF1428632338BF2800EF3DA8 /* Assets.xcassets */,
+				AF1428652338BF2800EF3DA8 /* LaunchScreen.storyboard */,
+				AF1428682338BF2800EF3DA8 /* Info.plist */,
+			);
+			path = MIMetal;
+			sourceTree = "<group>";
+		};
+		AF1428702338BF2900EF3DA8 /* MIMetalTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428712338BF2900EF3DA8 /* MIMetalTests.swift */,
+				AF1428732338BF2900EF3DA8 /* Info.plist */,
+			);
+			path = MIMetalTests;
+			sourceTree = "<group>";
+		};
+		AF14287B2338BF2900EF3DA8 /* MIMetalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF14287C2338BF2900EF3DA8 /* MIMetalUITests.swift */,
+				AF14287E2338BF2900EF3DA8 /* Info.plist */,
+			);
+			path = MIMetalUITests;
+			sourceTree = "<group>";
+		};
+		AF1428942338BF7200EF3DA8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428962338BF7200EF3DA8 /* Util */,
+				AF1428A02338BF7200EF3DA8 /* MIMetalRender.swift */,
+				AF1428A12338BF7200EF3DA8 /* MIMetalView.swift */,
+				AF1428A22338BF7200EF3DA8 /* MIMetalScene.swift */,
+				AF1428A32338BF7200EF3DA8 /* AvatarLoader.swift */,
+				AF1428A42338BF7200EF3DA8 /* Object */,
+				AF1428A92338BF7200EF3DA8 /* Compute */,
+				AF1428AC2338BF7200EF3DA8 /* IBase */,
+				AF1428B52338BF7200EF3DA8 /* Shader */,
+				AF1428BF2338BF7200EF3DA8 /* ModelIO */,
+				AF1429272338C36200EF3DA8 /* MIMetal-Bridging-Header.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AF1428962338BF7200EF3DA8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428972338BF7200EF3DA8 /* StreamReader.swift */,
+				AF1428982338BF7200EF3DA8 /* Extension.swift */,
+				AF1428992338BF7200EF3DA8 /* MathUtil.swift */,
+				AF14289A2338BF7200EF3DA8 /* ObjLoader */,
+				AF14289F2338BF7200EF3DA8 /* ZlibTool.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AF14289A2338BF7200EF3DA8 /* ObjLoader */ = {
+			isa = PBXGroup;
+			children = (
+				AF14289B2338BF7200EF3DA8 /* ObjTransToBinary.h */,
+				AF14289C2338BF7200EF3DA8 /* ObjLoaderBridge.mm */,
+				AF14289D2338BF7200EF3DA8 /* ObjLoaderBridge.h */,
+				AF14289E2338BF7200EF3DA8 /* ObjTransToBinary.cpp */,
+			);
+			path = ObjLoader;
+			sourceTree = "<group>";
+		};
+		AF1428A42338BF7200EF3DA8 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428A52338BF7200EF3DA8 /* MIMetalBackground.swift */,
+				AF1428A62338BF7200EF3DA8 /* MIObject.swift */,
+				AF1428A72338BF7200EF3DA8 /* MIDrawLineObject.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		AF1428A92338BF7200EF3DA8 /* Compute */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428AA2338BF7200EF3DA8 /* MIComputeHandler.swift */,
+				AF1428AB2338BF7200EF3DA8 /* MIEyelidComputeRender.swift */,
+			);
+			path = Compute;
+			sourceTree = "<group>";
+		};
+		AF1428AC2338BF7200EF3DA8 /* IBase */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428AE2338BF7200EF3DA8 /* MIObjectMaterial.swift */,
+				AF1428AF2338BF7200EF3DA8 /* MINode.swift */,
+				AF1428B02338BF7200EF3DA8 /* MIMaterial.swift */,
+				AF1428B12338BF7200EF3DA8 /* MICamera.swift */,
+				AF1428B22338BF7200EF3DA8 /* MIAction.swift */,
+				AF1428B32338BF7200EF3DA8 /* MIMesh.swift */,
+				AF1428B42338BF7200EF3DA8 /* MIHitResult.swift */,
+			);
+			path = IBase;
+			sourceTree = "<group>";
+		};
+		AF1428B52338BF7200EF3DA8 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428B62338BF7200EF3DA8 /* Diffuser */,
+				AF1428BD2338BF7200EF3DA8 /* Compute */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		AF1428B62338BF7200EF3DA8 /* Diffuser */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428B72338BF7200EF3DA8 /* model_diffuse.metal */,
+				AF1428B82338BF7200EF3DA8 /* model_highlight.metal */,
+				AF1428B92338BF7200EF3DA8 /* MIObjectDiffuse.metal */,
+				AF1428BA2338BF7200EF3DA8 /* shader_util.metal */,
+				AF1428BB2338BF7200EF3DA8 /* MIObjectLight.metal */,
+				AF1428BC2338BF7200EF3DA8 /* background.metal */,
+			);
+			path = Diffuser;
+			sourceTree = "<group>";
+		};
+		AF1428BD2338BF7200EF3DA8 /* Compute */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428BE2338BF7200EF3DA8 /* EyelidDrawableShader.metal */,
+			);
+			path = Compute;
+			sourceTree = "<group>";
+		};
+		AF1428BF2338BF7200EF3DA8 /* ModelIO */ = {
+			isa = PBXGroup;
+			children = (
+				AF1428C02338BF7200EF3DA8 /* MIModelCreater.swift */,
+			);
+			path = ModelIO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF1428582338BF2700EF3DA8 /* MIMetal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF1428812338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetal" */;
+			buildPhases = (
+				AF1428552338BF2700EF3DA8 /* Sources */,
+				AF1428562338BF2700EF3DA8 /* Frameworks */,
+				AF1428572338BF2700EF3DA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MIMetal;
+			productName = MIMetal;
+			productReference = AF1428592338BF2700EF3DA8 /* MIMetal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF14286C2338BF2900EF3DA8 /* MIMetalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF1428842338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetalTests" */;
+			buildPhases = (
+				AF1428692338BF2900EF3DA8 /* Sources */,
+				AF14286A2338BF2900EF3DA8 /* Frameworks */,
+				AF14286B2338BF2900EF3DA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF14286F2338BF2900EF3DA8 /* PBXTargetDependency */,
+			);
+			name = MIMetalTests;
+			productName = MIMetalTests;
+			productReference = AF14286D2338BF2900EF3DA8 /* MIMetalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF1428772338BF2900EF3DA8 /* MIMetalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF1428872338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetalUITests" */;
+			buildPhases = (
+				AF1428742338BF2900EF3DA8 /* Sources */,
+				AF1428752338BF2900EF3DA8 /* Frameworks */,
+				AF1428762338BF2900EF3DA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF14287A2338BF2900EF3DA8 /* PBXTargetDependency */,
+			);
+			name = MIMetalUITests;
+			productName = MIMetalUITests;
+			productReference = AF1428782338BF2900EF3DA8 /* MIMetalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF1428512338BF2700EF3DA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = zsr;
+				TargetAttributes = {
+					AF1428582338BF2700EF3DA8 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AF14286C2338BF2900EF3DA8 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AF1428582338BF2700EF3DA8;
+					};
+					AF1428772338BF2900EF3DA8 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AF1428582338BF2700EF3DA8;
+					};
+				};
+			};
+			buildConfigurationList = AF1428542338BF2700EF3DA8 /* Build configuration list for PBXProject "MIMetal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF1428502338BF2700EF3DA8;
+			productRefGroup = AF14285A2338BF2700EF3DA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF1428582338BF2700EF3DA8 /* MIMetal */,
+				AF14286C2338BF2900EF3DA8 /* MIMetalTests */,
+				AF1428772338BF2900EF3DA8 /* MIMetalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF1428572338BF2700EF3DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF1428672338BF2800EF3DA8 /* LaunchScreen.storyboard in Resources */,
+				AF1428642338BF2800EF3DA8 /* Assets.xcassets in Resources */,
+				AF1428622338BF2700EF3DA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF14286B2338BF2900EF3DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1428762338BF2900EF3DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF1428552338BF2700EF3DA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF1428E32338BF7200EF3DA8 /* MIObjectLight.metal in Sources */,
+				AF1428CF2338BF7200EF3DA8 /* MIMetalView.swift in Sources */,
+				AF1428D32338BF7200EF3DA8 /* MIObject.swift in Sources */,
+				AF1428D82338BF7200EF3DA8 /* MIObjectMaterial.swift in Sources */,
+				AF1428CB2338BF7200EF3DA8 /* ObjLoaderBridge.mm in Sources */,
+				AF1428E62338BF7200EF3DA8 /* MIModelCreater.swift in Sources */,
+				AF1428D72338BF7200EF3DA8 /* MIEyelidComputeRender.swift in Sources */,
+				AF1428D02338BF7200EF3DA8 /* MIMetalScene.swift in Sources */,
+				AF1428E12338BF7200EF3DA8 /* MIObjectDiffuse.metal in Sources */,
+				AF1428DF2338BF7200EF3DA8 /* model_diffuse.metal in Sources */,
+				AF1428D42338BF7200EF3DA8 /* MIDrawLineObject.swift in Sources */,
+				AF1428C82338BF7200EF3DA8 /* StreamReader.swift in Sources */,
+				AF1428E22338BF7200EF3DA8 /* shader_util.metal in Sources */,
+				AF1428C92338BF7200EF3DA8 /* Extension.swift in Sources */,
+				AF14285F2338BF2700EF3DA8 /* ViewController.swift in Sources */,
+				AF1428DE2338BF7200EF3DA8 /* MIHitResult.swift in Sources */,
+				AF1428D22338BF7200EF3DA8 /* MIMetalBackground.swift in Sources */,
+				AF1428DB2338BF7200EF3DA8 /* MICamera.swift in Sources */,
+				AF1428E02338BF7200EF3DA8 /* model_highlight.metal in Sources */,
+				AF14285D2338BF2700EF3DA8 /* AppDelegate.swift in Sources */,
+				AF1428CA2338BF7200EF3DA8 /* MathUtil.swift in Sources */,
+				AF1428D12338BF7200EF3DA8 /* AvatarLoader.swift in Sources */,
+				AF1428CC2338BF7200EF3DA8 /* ObjTransToBinary.cpp in Sources */,
+				AF1428DD2338BF7200EF3DA8 /* MIMesh.swift in Sources */,
+				AF1428DA2338BF7200EF3DA8 /* MIMaterial.swift in Sources */,
+				AF1428E52338BF7200EF3DA8 /* EyelidDrawableShader.metal in Sources */,
+				AF1428D92338BF7200EF3DA8 /* MINode.swift in Sources */,
+				AF1428CD2338BF7200EF3DA8 /* ZlibTool.swift in Sources */,
+				AF1428DC2338BF7200EF3DA8 /* MIAction.swift in Sources */,
+				AF1428CE2338BF7200EF3DA8 /* MIMetalRender.swift in Sources */,
+				AF1428E42338BF7200EF3DA8 /* background.metal in Sources */,
+				AF1428D62338BF7200EF3DA8 /* MIComputeHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1428692338BF2900EF3DA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF1428722338BF2900EF3DA8 /* MIMetalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1428742338BF2900EF3DA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF14287D2338BF2900EF3DA8 /* MIMetalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF14286F2338BF2900EF3DA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF1428582338BF2700EF3DA8 /* MIMetal */;
+			targetProxy = AF14286E2338BF2900EF3DA8 /* PBXContainerItemProxy */;
+		};
+		AF14287A2338BF2900EF3DA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF1428582338BF2700EF3DA8 /* MIMetal */;
+			targetProxy = AF1428792338BF2900EF3DA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF1428602338BF2700EF3DA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF1428612338BF2700EF3DA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF1428652338BF2800EF3DA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF1428662338BF2800EF3DA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF14287F2338BF2900EF3DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF1428802338BF2900EF3DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF1428822338BF2900EF3DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MIMetal/Core/MIMetal-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF1428832338BF2900EF3DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MIMetal/Core/MIMetal-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF1428852338BF2900EF3DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MIMetal.app/MIMetal";
+			};
+			name = Debug;
+		};
+		AF1428862338BF2900EF3DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MIMetal.app/MIMetal";
+			};
+			name = Release;
+		};
+		AF1428882338BF2900EF3DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MIMetal;
+			};
+			name = Debug;
+		};
+		AF1428892338BF2900EF3DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LPZMBV228;
+				INFOPLIST_FILE = MIMetalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zsro.MIMetalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MIMetal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF1428542338BF2700EF3DA8 /* Build configuration list for PBXProject "MIMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF14287F2338BF2900EF3DA8 /* Debug */,
+				AF1428802338BF2900EF3DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF1428812338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF1428822338BF2900EF3DA8 /* Debug */,
+				AF1428832338BF2900EF3DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF1428842338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF1428852338BF2900EF3DA8 /* Debug */,
+				AF1428862338BF2900EF3DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF1428872338BF2900EF3DA8 /* Build configuration list for PBXNativeTarget "MIMetalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF1428882338BF2900EF3DA8 /* Debug */,
+				AF1428892338BF2900EF3DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF1428512338BF2700EF3DA8 /* Project object */;
+}
