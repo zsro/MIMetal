@@ -60,9 +60,9 @@ class MIModelCreater{
     
     static func box(length: Float, width: Float, height: Float) -> MDLMesh{
         let meshAllocator = MTKMeshBufferAllocator(device: mtlDevice)
-        let mdlMesh = MDLMesh.init(boxWithExtent: float3(length, width, height), segments: uint3(5,5,5), inwardNormals: true, geometryType: .triangles, allocator: meshAllocator)
+        let mdlMesh = MDLMesh.init(boxWithExtent: float3(length, width, height), segments: uint3(10,10,10), inwardNormals: false, geometryType: .triangles, allocator: meshAllocator)
         mdlMesh.vertexDescriptor = vertexDescriptor
-        
+
         return mdlMesh
     }
     

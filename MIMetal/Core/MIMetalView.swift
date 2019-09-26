@@ -22,17 +22,19 @@ public class MIMetalView: MTKView {
     
     var depthTexture: MTLTexture?
     private var time: Timer?
-    private let framecount: CGFloat = 30
+    private var framecount: CGFloat = 120
 
     init(frame: CGRect) {
         
         super.init(frame: frame, device: mtlDevice)
-        self.isPaused = true
+
         self.autoResizeDrawable = false
         autoresizingMask = .init(rawValue: AutoresizingMask.flexibleHeight.rawValue | AutoresizingMask.flexibleWidth.rawValue)
-
+//        self.preferredFramesPerSecond = 120
+        self.isPaused = true
         setPaused(false)
         makeDepthTexture()
+//        sampleCount = 4
     }
     
     

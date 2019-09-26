@@ -87,7 +87,7 @@ public class MIMaterial {
         
         rpld.depthAttachmentPixelFormat = .depth32Float
         rpld.colorAttachments[0].pixelFormat = .bgra8Unorm
-        
+//        rpld.sampleCount = 4
         renderPipelineState = try! mtlDevice.makeRenderPipelineState(descriptor: rpld)
     }
     
@@ -101,6 +101,7 @@ public class MIMaterial {
     
     public func setTexture(cgImage:CGImage) -> Void {
         let loader = MTKTextureLoader.init(device: mtlDevice)
+        
         do{
             diffuseTexture = try loader.newTexture(cgImage: cgImage, options: nil)
         }catch{
@@ -122,11 +123,10 @@ public class MIMaterial {
         msd.sAddressMode     = .clampToZero
         msd.rAddressMode     = .clampToZero
         msd.tAddressMode     = .clampToZero
-        
         sampler = mtlDevice.makeSamplerState(descriptor: msd)
     }
     
-    func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, depthTexture: MTLTexture?, bufferInfo: MIBufferInfo){
+    func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, bufferInfo: MIBufferInfo){
         commandEncoder.setDepthStencilState(depthStencilState)
         commandEncoder.setRenderPipelineState(renderPipelineState)
         commandEncoder.setFrontFacing(winding)

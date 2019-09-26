@@ -8,15 +8,18 @@
 
 import Foundation
 import MetalKit
+import ARKit
 
-public class MIMetalBackground: NSObject,MIMetalDelegate {
+public class MIMetalBackground: NSObject {
 
 
     var rps: MTLRenderPipelineState?
     var vertexBuffer: MTLBuffer!
     var uniformBuffer: MTLBuffer!
-    var diffuseTexture:MTLTexture!
-    var samplerState:MTLSamplerState!
+    var diffuseTexture: MTLTexture!
+    var samplerState: MTLSamplerState!
+    
+    var capturedImageTextureCache: CVMetalTextureCache!
     
     deinit {
         print("bg deinit")
@@ -24,22 +27,55 @@ public class MIMetalBackground: NSObject,MIMetalDelegate {
     
     override init() {
         super.init()
+        
+        var textureCache: CVMetalTextureCache?
+        CVMetalTextureCacheCreate(nil, nil, mtlDevice, nil, &textureCache)
+        capturedImageTextureCache = textureCache
     }
     
-    func initialize(device: MTLDevice, library: MTLLibrary) {
-        createBuffers(device: device)
-        registerShaders(device: device, library: library)
-        createSamplerState(device:device)
+    func initialize() {
+        createBuffers(device: mtlDevice)
+        registerShaders(device: mtlDevice, library: mtlLibrary)
+        createSamplerState(device: mtlDevice)
     }
     
     
-    public func setTexture(texture: UIImage) -> Void {
+    public func setTexture(from texture: UIImage) -> Void {
         let loader = MTKTextureLoader.init(device: mtlDevice)
         do{
             self.diffuseTexture = try loader.newTexture(cgImage: texture.cgImage!, options: nil)
         }catch{
             print("error: metal texture load failed !!!")
         }
+    }
+   
+    
+    func updateCapturedImageTextures(frame: ARFrame) -> Void{
+        let pixelBuffer = frame.capturedImage
+        if CVPixelBufferGetPlaneCount(pixelBuffer) < 2{
+            return
+        }
+        
+        let textureY = createTexture(from: pixelBuffer, pixelFormat:.r8Unorm, planeIndex:0)!
+        let textureCbCr = createTexture(from: pixelBuffer, pixelFormat:.rg8Unorm, planeIndex:1)!
+        
+    }
+    
+    public func createTexture(from pixelBuffer: CVPixelBuffer, pixelFormat: MTLPixelFormat, planeIndex: Int) -> MTLTexture? {
+        let width = CVPixelBufferGetWidth(pixelBuffer)
+        let height = CVPixelBufferGetHeight(pixelBuffer)
+        var texture: CVMetalTexture?
+        let status = CVMetalTextureCacheCreateTextureFromImage(nil,
+                                                               capturedImageTextureCache,
+                                                               pixelBuffer,
+                                                               nil,
+                                                               pixelFormat,
+                                                               width,
+                                                               height,
+                                                               planeIndex,
+                                                               &texture)
+        
+        return status == kCVReturnSuccess ? CVMetalTextureGetTexture(texture!) : nil
     }
     
     func createSamplerState(device:MTLDevice) -> Void {
@@ -108,14 +144,5 @@ public class MIMetalBackground: NSObject,MIMetalDelegate {
     }
     
     
-    
-}
-
-
-protocol MIMetalDelegate {
-    
-    func initialize(device:MTLDevice,library:MTLLibrary) -> Void
-    
-    func render(commandEncoder:MTLRenderCommandEncoder) -> Void
     
 }

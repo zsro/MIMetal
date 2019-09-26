@@ -49,7 +49,6 @@ vertex VertexOut vertex_light(VertexIn in [[stage_in]],
 
 fragment float4 fragment_light(VertexOut i [[stage_in]],
                               texture2d<float> diffuseTexture [[texture(0)]],
-                              depth2d<float> depthTexture [[texture(1)]],
                               sampler samplr [[sampler(0)]])
 {
     float4 color = diffuseTexture.sample(samplr, i.texCoords);

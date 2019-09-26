@@ -41,11 +41,9 @@ public class MIMetalRender: NSObject {
         queue = mtlDevice.makeCommandQueue()
         bgRender = MIMetalBackground.init()
         let bg = UIImage.color2UIImage(color: UIColor.black, size: CGSize.init(width: 20, height: 20))
-        bgRender.setTexture(texture: bg)
-        bgRender.initialize(device: mtlDevice, library: mtlLibrary)
+        bgRender.setTexture(from: bg)
+        bgRender.initialize()
     }
-    
-
     
 }
 
@@ -67,8 +65,7 @@ extension MIMetalRender: MTKViewDelegate{
         bgRender.render(commandEncoder: commandEncoder)
        
         if let scene = scene{
-            drawNode(node: scene.rootNode, camera: scene.camera, commandEncoder: commandEncoder, depthTexture: scene.view.depthTexture, bufferInfo: MIBufferInfo.init(lightPos: CGPoint(),
-                                                                                                                               deltaTime: deltaTime))
+            drawNode(node: scene.rootNode, camera: scene.camera, commandEncoder: commandEncoder, bufferInfo: MIBufferInfo.init(lightPos: CGPoint(), deltaTime: deltaTime))
         }
     
         commandEncoder.endEncoding()
@@ -85,12 +82,12 @@ extension MIMetalRender: MTKViewDelegate{
         commandBuffer.commit()
     }
     
-    public func drawNode(node: MINode, camera: MICamera, commandEncoder: MTLRenderCommandEncoder, depthTexture: MTLTexture?,bufferInfo: MIBufferInfo) -> Void {
+    public func drawNode(node: MINode, camera: MICamera, commandEncoder: MTLRenderCommandEncoder, bufferInfo: MIBufferInfo) -> Void {
         if node.mesh != nil && node.isHiden == false{
-            node.render(commandEncoder: commandEncoder, camera: camera, bufferIndex: bufferIndex, depthTexture: depthTexture, bufferInfo: bufferInfo)
+            node.render(commandEncoder: commandEncoder, camera: camera, bufferIndex: bufferIndex, bufferInfo: bufferInfo)
         }
         for item in node.children{
-            drawNode(node: item, camera: camera, commandEncoder: commandEncoder, depthTexture: depthTexture, bufferInfo: bufferInfo)
+            drawNode(node: item, camera: camera, commandEncoder: commandEncoder, bufferInfo: bufferInfo)
         }
     }
     

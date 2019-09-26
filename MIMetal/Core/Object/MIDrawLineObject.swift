@@ -37,9 +37,9 @@ public class MIDrawLineObject: MINode {
         MIVertex.init(position: simd_float4(0,0,0,1), normal: simd_float4(), texcoord: simd_float2())]
     }
     
-    override func render(commandEncoder: MTLRenderCommandEncoder, camera: MICamera, bufferIndex: Int, depthTexture: MTLTexture?, bufferInfo: MIBufferInfo) {
+    override func render(commandEncoder: MTLRenderCommandEncoder, camera: MICamera, bufferIndex: Int, bufferInfo: MIBufferInfo) {
         commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        material?.render(commandEncoder: commandEncoder, bufferIndex: bufferIndex, uniforms_default: camera.getUniform(transform: worldTransform), depthTexture: depthTexture, bufferInfo: bufferInfo)
+        material?.render(commandEncoder: commandEncoder, bufferIndex: bufferIndex, uniforms_default: camera.getUniform(transform: worldTransform), bufferInfo: bufferInfo)
         commandEncoder.drawPrimitives(type: .lineStrip, vertexStart: 0, vertexCount: vecs.count)
     }
 }
@@ -69,7 +69,7 @@ class MIDrawLineMaterial: MIMaterial {
         renderPipelineState = try! mtlDevice.makeRenderPipelineState(descriptor: rpld)
     }
     
-    override func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, depthTexture: MTLTexture?, bufferInfo: MIBufferInfo) {
+    override func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, bufferInfo: MIBufferInfo) {
         var u = Uniform_line.init(modelVP: uniforms_default.modelViewProjectionMatrix)
         let uniformBufferOffset = MemoryLayout<Uniform_line>.size * bufferIndex
         memcpy(uniformBuffer.contents() + uniformBufferOffset, &u, MemoryLayout<Uniform_line>.size)

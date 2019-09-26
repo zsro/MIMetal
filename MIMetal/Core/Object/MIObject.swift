@@ -24,8 +24,6 @@ public class MIObject: MINode {
         let mtlVertexDescriptor = MTKMetalVertexDescriptorFromModelIO(mdlMesh.vertexDescriptor)!
         
         material.createPipeline(vertexDescriptor: mtlVertexDescriptor)
-        material.depthCompareFunction = .always
-        material.cullModel = .none
         self.material = material
     }
     

@@ -44,6 +44,7 @@
 		AF1428E42338BF7200EF3DA8 /* background.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BC2338BF7200EF3DA8 /* background.metal */; };
 		AF1428E52338BF7200EF3DA8 /* EyelidDrawableShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF1428BE2338BF7200EF3DA8 /* EyelidDrawableShader.metal */; };
 		AF1428E62338BF7200EF3DA8 /* MIModelCreater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1428C02338BF7200EF3DA8 /* MIModelCreater.swift */; };
+		AF2605EA233CD53300273652 /* ViewController+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2605E9233CD53300273652 /* ViewController+Update.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		AF1428BE2338BF7200EF3DA8 /* EyelidDrawableShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = EyelidDrawableShader.metal; sourceTree = "<group>"; };
 		AF1428C02338BF7200EF3DA8 /* MIModelCreater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIModelCreater.swift; sourceTree = "<group>"; };
 		AF1429272338C36200EF3DA8 /* MIMetal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIMetal-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF2605E9233CD53300273652 /* ViewController+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Update.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +162,9 @@
 		AF14285B2338BF2700EF3DA8 /* MIMetal */ = {
 			isa = PBXGroup;
 			children = (
+				AF2605E8233CD51000273652 /* VC */,
 				AF1428942338BF7200EF3DA8 /* Core */,
 				AF14285C2338BF2700EF3DA8 /* AppDelegate.swift */,
-				AF14285E2338BF2700EF3DA8 /* ViewController.swift */,
 				AF1428602338BF2700EF3DA8 /* Main.storyboard */,
 				AF1428632338BF2800EF3DA8 /* Assets.xcassets */,
 				AF1428652338BF2800EF3DA8 /* LaunchScreen.storyboard */,
@@ -301,6 +303,15 @@
 			path = ModelIO;
 			sourceTree = "<group>";
 		};
+		AF2605E8233CD51000273652 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				AF14285E2338BF2700EF3DA8 /* ViewController.swift */,
+				AF2605E9233CD53300273652 /* ViewController+Update.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,6 +448,7 @@
 				AF1428D32338BF7200EF3DA8 /* MIObject.swift in Sources */,
 				AF1428D82338BF7200EF3DA8 /* MIObjectMaterial.swift in Sources */,
 				AF1428CB2338BF7200EF3DA8 /* ObjLoaderBridge.mm in Sources */,
+				AF2605EA233CD53300273652 /* ViewController+Update.swift in Sources */,
 				AF1428E62338BF7200EF3DA8 /* MIModelCreater.swift in Sources */,
 				AF1428D72338BF7200EF3DA8 /* MIEyelidComputeRender.swift in Sources */,
 				AF1428D02338BF7200EF3DA8 /* MIMetalScene.swift in Sources */,
@@ -641,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LPZMBV228;
 				INFOPLIST_FILE = MIMetal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,6 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LPZMBV228;
 				INFOPLIST_FILE = MIMetal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

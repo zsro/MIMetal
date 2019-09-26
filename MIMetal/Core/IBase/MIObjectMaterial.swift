@@ -23,7 +23,8 @@ class MIObjectMaterial: MIMaterial {
     
     override init() {
         super.init()
-        
+        cullModel = .back
+        winding = .counterClockwise
         uniformBuffer = mtlDevice.makeBuffer(length:  MemoryLayout<Uniforms_Obj>.size * MIInFlightBufferCount, options: [])
     }
     
@@ -53,20 +54,21 @@ class MIObjectMaterial: MIMaterial {
     }
 
     
-    override func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, depthTexture: MTLTexture?, bufferInfo: MIBufferInfo) {
+    override func render(commandEncoder: MTLRenderCommandEncoder, bufferIndex: Int, uniforms_default: Uniforms_default, bufferInfo: MIBufferInfo) {
         commandEncoder.setDepthStencilState(depthStencilState)
         commandEncoder.setRenderPipelineState(renderPipelineState)
         commandEncoder.setFrontFacing(winding)
         commandEncoder.setCullMode(cullModel)
+
         constants.modelViewProjectionMatrix = uniforms_default.modelViewProjectionMatrix
         constants.normalMatrix = uniforms_default.normalMatrix
 
         let uniformBufferOffset = MemoryLayout<Uniforms_Obj>.size * bufferIndex
-        memcpy(uniformBuffer.contents(), &constants + uniformBufferOffset, MemoryLayout<Uniforms_Obj>.size)
+        memcpy(uniformBuffer.contents() + uniformBufferOffset, &constants, MemoryLayout<Uniforms_Obj>.size)
 
         commandEncoder.setVertexBuffer(uniformBuffer, offset: 0, index: 1)
         commandEncoder.setFragmentTexture(diffuseTexture, index: 0)
-        commandEncoder.setFragmentTexture(depthTexture, index: 1)
+//        commandEncoder.setFragmentTexture(depthTexture, index: 1)
         commandEncoder.setFragmentSamplerState(sampler, index: 0)
     }
     

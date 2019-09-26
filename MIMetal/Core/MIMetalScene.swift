@@ -61,7 +61,7 @@ public class MIMetalScene: NSObject {
      
         render.scene = self
         
-        camera.position = float3.init(0, -45, 400)
+        camera.position = float3.init(0, 0, 50)
         camera.aspect = Float(frame.size.width / frame.size.height)
         
         let pan = UIPanGestureRecognizer.init(target: self, action: #selector(panHandle(_:)))
@@ -162,7 +162,7 @@ public class MIMetalScene: NSObject {
         }
         let limitPos: Float = 80
         var pos = node.position
-        pos += float3.init(Float(velocity.x*10)*kVelocityScale, Float(-velocity.y*10)*kVelocityScale, 0)
+        pos += float3.init(Float(velocity.x)*kVelocityScale, Float(-velocity.y)*kVelocityScale, 0)
         
         controlNode?.position.x = max(min(pos.x, limitPos), -limitPos)
         controlNode?.position.y = max(min(pos.y, limitPos), -limitPos)
@@ -175,9 +175,7 @@ public class MIMetalScene: NSObject {
         var rotate = node.rotate
         
         rotate.y += kVelocityScale * Float(-velocity.x)
-        rotate.y = max(min(rotate.y, Float.pi/2), -Float.pi/2)
         rotate.x += kVelocityScale * Float(-velocity.y)
-        rotate.x = max(min(rotate.x, Float.pi/2), -Float.pi/2)
         controlNode?.rotate = rotate
     
     }
@@ -198,6 +196,7 @@ public class MIMetalScene: NSObject {
     
     
     func hitTest(_ point: CGPoint) -> MIHitResult? {
+        
         let viewport = view.bounds
         let width = Float(viewport.size.width)
         let height = Float(viewport.size.height)

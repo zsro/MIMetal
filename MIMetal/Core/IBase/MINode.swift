@@ -68,12 +68,14 @@ public class MINode: NSObject{
     }
 
     
-    func render(commandEncoder: MTLRenderCommandEncoder, camera: MICamera, bufferIndex: Int, depthTexture: MTLTexture?, bufferInfo: MIBufferInfo) -> Void {
+    func render(commandEncoder: MTLRenderCommandEncoder, camera: MICamera, bufferIndex: Int, bufferInfo: MIBufferInfo) -> Void {
         updateAction(deltaTime: bufferInfo.deltaTime)
+        
+        updatePhysics()
         
         let uniform = camera.getUniform(transform: worldTransform)
         
-        material?.render(commandEncoder: commandEncoder, bufferIndex: bufferIndex, uniforms_default: uniform, depthTexture: depthTexture, bufferInfo: bufferInfo)
+        material?.render(commandEncoder: commandEncoder, bufferIndex: bufferIndex, uniforms_default: uniform, bufferInfo: bufferInfo)
         
         mesh?.render(commandEncoder: commandEncoder)
     }
@@ -91,6 +93,17 @@ public class MINode: NSObject{
             item.action.timingFunction?(wealSelf, deltaTime)
         }
     }
+    
+    /// 物理检测
+    func updatePhysics() -> Void {
+        
+        //1.检测地面
+        
+        //2.树形检测
+        
+        
+    }
+    
 }
 
 public extension MINode{

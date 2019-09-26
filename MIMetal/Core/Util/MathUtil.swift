@@ -41,7 +41,7 @@ struct EyelidUniforms {
 }
 
 func matrix_float4x4_transform(pos: simd_float3, rotate: simd_float3, scale: simd_float3) -> simd_float4x4 {
-    return matrix_float4x4_translation(t: pos) * matrix_float4x4_rotation_Y(angle: rotate.y) * matrix_float4x4_rotation_X(angle: rotate.x) * matrix_float4x4_rotation_Z(angle: rotate.z) * matrix_float4x4_uniform_scale(scale: scale)
+    return matrix_float4x4_translation(t: pos) * matrix_float4x4_rotation_X(angle: rotate.x) * matrix_float4x4_rotation_Y(angle: rotate.y) * matrix_float4x4_rotation_Z(angle: rotate.z) * matrix_float4x4_uniform_scale(scale: scale)
 }
 
 func matrix_float4x4_translation(t:simd_float3) -> matrix_float4x4
